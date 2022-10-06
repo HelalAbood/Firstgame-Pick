@@ -1,0 +1,92 @@
+* { 
+    box-sizing: border-box;
+    margin:0px;
+}
+body {
+    background-color: black;
+    
+}
+
+.pon { 
+    width: 300px;
+    height: 100px;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(132%,224%);
+}
+.pon div { 
+    background: orange;
+    width: 40px;
+    height: 40px;
+    margin: auto 10px;
+    border-radius: 50%;
+    animation-name: pon;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+}
+.pon .hidfri { 
+    animation-delay: 1s;
+}
+.pon .hidmid { 
+    animation-delay: 2s;
+}
+.pon .hidlast { 
+    animation-delay: 3s;
+}
+@keyframes pon {
+    from { opacity: 1;
+    }
+    to { 
+        opacity: 0;
+    }
+}
+
+
+.rec { 
+    width: 0px;
+    height: 0px;
+    position:absolute;
+    left: 350px;
+    top: 32%;
+    border-radius: 50%;
+    border: 40px yellow solid;
+    border-right-color:transparent;
+    animation-name: eating-now;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-direction:normal;
+}
+
+@keyframes eating-now {
+    0% { 
+        left: 350px;
+        border-right-color:transparent;
+    }
+    20% { 
+        border-right-color:yellow;
+    }
+    40% { 
+        border-right-color:transparent;
+    }
+    50% { 
+        left: 450px;
+        border-right-color:yellow;
+    }
+    60% { 
+        border-right-color:transparent;
+    }
+    80% { 
+        border-right-color:yellow;
+    }
+    100%{
+        left:550px;
+        border-right-color:transparent;
+    } 
+}
